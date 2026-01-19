@@ -28,3 +28,23 @@ const xhr= new XMLHttpRequest;
     xhr.send();
 }
 })
+         //method 2(fetch method)
+// searchBtn.addEventListener("click", async () => {
+//   try {
+//     const city = cityInput.value;
+//     if (!city) return alert("Enter location");
+
+//     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c7e9450c2ae6ad4cea07ac177fa99f3b&units=metric`;
+
+//     const response = await fetch(url);
+//     if (!response.ok) throw new Error("City not found");
+
+//     const data = await response.json();
+
+//     document.querySelector('#temperature').innerText =
+//       data.main.temp + "°C";
+
+//   } catch (err) {
+//     alert(err.message);
+//   }
+// });
