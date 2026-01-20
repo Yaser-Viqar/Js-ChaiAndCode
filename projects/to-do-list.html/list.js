@@ -1,7 +1,7 @@
-const btn=document.querySelector('.button')
-const inp=document.querySelector('.text')
-const listcontainer=document.querySelector('.listcontainer')
-btn.addEventlistner('click',()=>{
+const btn=document.querySelector('#button')
+const inp=document.querySelector('#text')
+const listcontainer=document.querySelector('#listcontainer')
+btn.addEventListener('click',()=>{
     if(inp.value===''){
         alert("enter task");
     }
@@ -14,4 +14,7 @@ btn.addEventlistner('click',()=>{
         element.appendChild(span)
     }
     inp.value=''
+})
+span.addEventListener('click',()=>{
+    
 })

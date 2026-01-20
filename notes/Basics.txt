@@ -1,0 +1,3 @@
+javascript phle browser ke andr run hoti thi html ki file se link hokr islye zyada kisi ko pta nh tha jo ache soft engg hote the wahi setup kr pate the hr ek nh 
+pr jb se bahar nikali thi isse to kaafi jagah use hone lgi 
+isse kahi software environment provide krte jaise node ,dino,v8 jisse js ke code run ho pate h 

@@ -82,6 +82,32 @@
       font-size:22;
       color: #555;
     }
+   #listcontainer li{
+  position: relative;   /* 👈 IMPORTANT */
+  font-size: 25px;
+  padding: 5px 40px 5px 5px; /* right space for ❌ */
+  border: 1px solid #e85a2f;
+  background-color: #ad8686;
+  color: #fff;
+  border-radius: 10px;
+}
+
+
+    #listcontainer li span{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 20px;
+  color: #000000;
+  /* border: 1px solid #070707; */
+  border-radius: 5px;
+}
+
   </style>
 </head>
 
@@ -94,7 +120,7 @@
       <input id="text" placeholder="Add your task">
       <button id="button">Add</button>
     </div>
-    <div id="listcontainer">
+    <div style="padding-top: 20px;" id="listcontainer">
 
     </div>
   </div>
