@@ -27,3 +27,69 @@ new keyword se bnate h hum object aur hum __proto__ se prototype object access k
 .charAt() & .indexOf()   
  .charAt() se isse hum index daal kr pta kr skte h konsa character h us index pr 
  .indexOf() se hum jaan skte h character daal ko wo konse index pr h 
+
+Syntax
+string.substring(startIndex, endIndex)
+Example
+let str = "JavaScript";
+
+let result = str.substring(0, 4);
+console.log(result); // "Java"
+Special points
+
+str.substring(4, 0); // "Java" (swap kar deta hai)
+str.substring(-2, 4); // "Java" (negative ko 0 maan leta hai)
+❌ Negative index ka proper use nahi hota
+
+Syntax
+
+string.slice(start, end)
+🔹 Normal Example
+
+let str = "JavaScript";
+
+let result = str.slice(0, 4);
+console.log(result); // "Java"
+🔹 Negative Index Example (IMPORTANT)
+Negative ka matlab end se count hota hai 👇
+
+let str = "JavaScript";
+
+console.log(str.slice(-6));     // "Script"
+console.log(str.slice(-6, -3)); // "Scr"
+  Index samjho--
+
+J  a  v  a  S  c  r  i  p  t
+0  1  2  3  4  5  6  7  8  9
+-10-9 -8 -7 -6 -5 -4 -3 -2 -1
+
+Syntax
+
+string.trim()
+Example
+
+let str = "   hello world   ";
+
+console.log(str.trim()); // "hello world"
+console.log(str);        // "   hello world   "
+Related methods
+
+trimStart()
+trimEnd()
+
+
+Syntax
+
+string.replace(oldValue, newValue)
+🔹 Simple Example
+
+let str = "I love Java";
+
+let result = str.replace("Java", "JavaScript");
+console.log(result); // "I love JavaScript"
+🔹 Multiple replace ke liye (Regex)
+
+let str = "js js js";
+
+console.log(str.replace(/js/g, "JavaScript"));
+// "JavaScript JavaScript JavaScript"
