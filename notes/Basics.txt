@@ -18,3 +18,12 @@ Statically typed nahi hai.
 Dynamic Typing ka matlab
 Variable ka type pehle define nahi karna padta
 Runtime par type change ho sakta hai
+
+new keyword se bnate h hum object aur hum __proto__ se prototype object access kr skte h jaise 
+
+    const game = new String("hitesh");
+    console.log(game.__proto__); 
+ 
+.charAt() & .indexOf()   
+ .charAt() se isse hum index daal kr pta kr skte h konsa character h us index pr 
+ .indexOf() se hum jaan skte h character daal ko wo konse index pr h 
