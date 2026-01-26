@@ -1,0 +1,75 @@
+/******************** UNICODE ********************/
+
+// Unicode value nikalna (ASCII / Unicode)
+let ch = "A";
+
+// charCodeAt -> character ka Unicode number deta hai
+console.log(ch.charCodeAt(0)); 
+// Output: 65
+
+// Unicode se character banana
+console.log(String.fromCharCode(65)); 
+// Output: A
+
+
+
+/******************** REPEAT ********************/
+
+// repeat() string ko multiple times repeat karta hai
+let laugh = "ha";
+
+console.log(laugh.repeat(3)); 
+// Output: hahaha
+
+
+
+/******************** PADDING ********************/
+
+// padStart -> start me characters add karta hai
+let num = "5";
+
+console.log(num.padStart(3, "0")); 
+// Output: 005
+
+// padEnd -> end me characters add karta hai
+let lang = "JS";
+
+console.log(lang.padEnd(5, "!")); 
+// Output: JS!!!
+
+
+
+/******************** SPLIT ********************/
+
+// split() string ko array me convert karta hai
+let skills = "HTML,CSS,JavaScript";
+
+let arr = skills.split(",");
+
+console.log(arr); 
+// Output: ["HTML", "CSS", "JavaScript"]
+
+
+
+/******************** REPLACE ALL ********************/
+
+// replaceAll() saare matching words replace karta hai
+let msg = "js is easy and js is powerful";
+
+let result = msg.replaceAll("js", "JavaScript");
+
+console.log(result);
+// Output: JavaScript is easy and JavaScript is powerful
+
+
+
+/******************** INCLUDES ********************/
+
+// includes() check karta hai word exist karta hai ya nahi
+let sentence = "I love JavaScript";
+
+console.log(sentence.includes("JavaScript")); 
+// Output: true
+
+console.log(sentence.includes("Python")); 
+// Output: false
