@@ -73,3 +73,14 @@ console.log(sentence.includes("JavaScript"));
 
 console.log(sentence.includes("Python")); 
 // Output: false
+
+null or undefined 
+null comparison operator(>,<,>=,<=) ke sath convert hj jata h 0 m 
+console.log(null==0)//false
+console.log(null>=0)//true yaha pr kyoki null 0 bn gya 
+console.log(null>0)//false
+
+console.log(undefined==0)//false
+console.log(undefined<0)//true 
+console.log(undefined>=0)//false
+
