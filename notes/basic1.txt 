@@ -84,3 +84,40 @@ console.log(undefined==0)//false
 console.log(undefined<0)//true 
 console.log(undefined>=0)//false
 
+Math.abs() – Absolute value
+👉 Negative number ko positive bana deta hai
+
+let num = -10;
+console.log(Math.abs(num));
+Output:
+Copy code
+
+10
+2️⃣ Math.floor() – Neeche wali value
+👉 Decimal number ko chhoti (lower) integer value me convert karta hai
+
+let num = 5.9;
+console.log(Math.floor(num));
+Output:
+Copy code
+
+5
+3️⃣ Math.ceil() – Upar wali value
+👉 Decimal number ko badi (upper) integer value me convert karta hai
+
+let num = 5.1;
+console.log(Math.ceil(num));
+Output:
+Copy code
+
+6
+4️⃣ Math.round() – Round off
+👉 .5 ya zyada ho to upar, .5 se kam ho to neeche
+
+let num = 4.6;
+console.log(Math.round(num));
+Output:
+Copy code
+
+5
+
