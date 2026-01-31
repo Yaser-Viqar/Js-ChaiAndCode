@@ -1,2 +1,37 @@
 concat aur push m difference ye h concat jo h add kr ke ek arrange m dusra new array deta h aur push ek m dusra add kr deta bus 
 
+
+slice()
+👉 Array ka ek hissa copy karta hai
+👉 Original array change nahi hota
+Syntax:
+
+array.slice(start, end)
+Example:
+
+let arr = [1, 2, 3, 4, 5];
+
+let result = arr.slice(1, 4);
+
+console.log(result); // [2, 3, 4]
+console.log(arr);    // [1, 2, 3, 4, 5] (same)
+📌 end index include nahi hota
+🔹 splice()
+👉 Array ko modify karta hai
+👉 Elements delete / add / replace sab kar sakta hai
+Syntax:
+
+array.splice(start, deleteCount, item1, item2, ...)
+Example (remove):
+
+let arr = [1, 2, 3, 4, 5];
+
+arr.splice(1, 2);
+
+console.log(arr); // [1, 4, 5]
+Example (add):
+let arr = [1, 2, 5];
+
+arr.splice(2, 0, 3, 4);
+
+console.log(arr); // [1, 2, 3, 4, 5]
