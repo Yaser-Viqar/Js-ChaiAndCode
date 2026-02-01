@@ -1,0 +1,114 @@
+1️⃣ filter() — chaan-na 🧹
+👉 Array se sirf wahi elements nikalta hai jo condition pass karein
+Syntax:
+Copy code
+Js
+array.filter((value, index, array) => condition);
+Example:
+Copy code
+Js
+let nums = [1, 2, 3, 4, 5, 6];
+
+let even = nums.filter(n => n % 2 === 0);
+
+console.log(even); // [2, 4, 6]
+📌 Original array change ❌
+📌 New array return ✅
+🔹 Real-life Example
+Copy code
+Js
+let users = [
+  { name: "Yaser", age: 22 },
+  { name: "Ali", age: 17 }
+];
+
+let adults = users.filter(u => u.age >= 18);
+🔹 2️⃣ map() — transform karna 🔄
+👉 Har element ko change karke naya array banata hai
+Syntax:
+Copy code
+Js
+array.map((value, index, array) => newValue);
+Example:
+Copy code
+Js
+let nums = [1, 2, 3];
+
+let squares = nums.map(n => n * n);
+// [1,4,9]
+📌 Length same rehti hai
+📌 Original array change ❌
+🔹 3️⃣ Chaining (filter + map) 🔥
+👉 Ek ke baad ek methods use karna
+Example:
+Copy code
+Js
+let nums = [1, 2, 3, 4, 5, 6];
+
+let result = nums
+  .filter(n => n % 2 === 0)   // [2,4,6]
+  .map(n => n * 10);         // [20,40,60]
+
+console.log(result);
+🧠 Flow:
+Pehle filter
+Uska output → map ka input
+🔹 4️⃣ reduce() — sab ko ek me jodna 🧠 (IMPORTANT)
+👉 Array ko ek single value me reduce karta hai
+Syntax:
+Copy code
+Js
+array.reduce((accumulator, current) => {
+  return updatedAccumulator;
+}, initialValue);
+Simple Example (sum)
+Copy code
+Js
+let nums = [1, 2, 3, 4];
+
+let sum = nums.reduce((acc, curr) => {
+  return acc + curr;
+}, 0);
+
+console.log(sum); // 10
+🧠 Breakdown:
+acc → total
+curr → current element
+0 → starting value
+🔹 Reduce without initial value
+Copy code
+Js
+nums.reduce((acc, curr) => acc + curr);
+📌 First element acc ban jata hai
+🔹 5️⃣ reduce real use cases 🔥
+Total price
+Copy code
+Js
+let cart = [
+  { item: "Book", price: 200 },
+  { item: "Pen", price: 50 }
+];
+
+let total = cart.reduce((sum, item) => sum + item.price, 0);
+Count frequency
+Copy code
+Js
+let names = ["a", "b", "a", "c", "b"];
+
+let count = names.reduce((acc, name) => {
+  acc[name] = (acc[name] || 0) + 1;
+  return acc;
+}, {});
+🔥 filter vs map vs reduce (Quick Table)
+Method
+Kaam
+Return
+filter
+Select
+Array
+map
+Transform
+Array
+reduce
+Combine
+Anything
