@@ -1,0 +1,137 @@
+1️⃣ Singleton aur Non-Singleton kya hota hai?
+✅ Singleton
+👉 Sirf ek hi instance (object) banta hai
+👉 Baar-baar naya object nahi banta
+Example (JS Object Literal)
+Copy code
+Js
+const user = {
+  name: "Yaser",
+  age: 22
+};
+📌 user ka sirf ek hi object memory me hota hai
+👉 Isse kehte hain Singleton object
+❌ Non-Singleton
+👉 Jab har baar naya object banta hai
+Example (Constructor / Class)
+Copy code
+Js
+function User(name) {
+  this.name = name;
+}
+
+const u1 = new User("Yaser");
+const u2 = new User("Ali");
+📌 u1 aur u2 → alag-alag objects
+👉 Isse kehte hain Non-Singleton
+🧠 One-Line yaad rakhne ka rule
+Object literal → Singleton
+Constructor / class → Non-Singleton
+🔹 2️⃣ Map kya hota hai? (IMPORTANT 🔥)
+👉 Map ek key-value data structure hai
+👉 Object jaisa hi hota hai, but zyada powerful
+Map create karna
+Copy code
+Js
+const myMap = new Map();
+Values add karna
+Copy code
+Js
+myMap.set("name", "Yaser");
+myMap.set("age", 22);
+myMap.set(1, "one");
+📌 Map me:
+Key kisi bhi type ki ho sakti hai
+Order maintain hota hai
+Duplicate key allowed ❌
+🔹 3️⃣ Map ka istemal (Why Map?)
+Feature
+Object
+Map
+Key type
+String/Symbol
+Any
+Order
+Guaranteed nahi
+Guaranteed
+Size
+Direct nahi
+map.size
+Iteration
+Thoda complex
+Easy
+👉 Jab frequent add/remove + iteration ho → Map best
+🔹 4️⃣ Map par iteration (for…of) ⭐
+✅ Correct way
+Copy code
+Js
+const myMap = new Map();
+myMap.set("IN", "India");
+myMap.set("US", "America");
+
+for (const item of myMap) {
+  console.log(item);
+}
+Output:
+Copy code
+Js
+["IN", "India"]
+["US", "America"]
+✅ Key aur value alag-alag
+Copy code
+Js
+for (const [key, value] of myMap) {
+  console.log(key, "=>", value);
+}
+🔹 5️⃣ Object par iteration kaise karte hain?
+❌ Object is not directly iterable
+Copy code
+Js
+const user = { name: "Yaser", age: 22 };
+
+// ❌ Error
+for (const item of user) {}
+✅ Correct ways
+1️⃣ for...in
+Copy code
+Js
+for (const key in user) {
+  console.log(key, user[key]);
+}
+2️⃣ Object.entries()
+Copy code
+Js
+for (const [key, value] of Object.entries(user)) {
+  console.log(key, value);
+}
+🔹 6️⃣ Array par iteration
+✅ for...of (MOST USED)
+Copy code
+Js
+const arr = [10, 20, 30];
+
+for (const val of arr) {
+  console.log(val);
+}
+✅ Traditional for loop
+Copy code
+Js
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+}
+❌ for...in (avoid for arrays)
+Copy code
+Js
+for (const index in arr) {
+  console.log(index); // index deta hai
+}
+🔹 7️⃣ for...of vs for...in (Confusion Clear)
+Loop
+Use on
+Kya deta
+for...of
+Array, Map, String
+Value
+for...in
+Object
+Key
