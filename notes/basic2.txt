@@ -127,3 +127,21 @@ let arr = [1,[2,[3,[4]]]];
 arr.flat(2); // [1,2,3,[4]]
 arr.flat(Infinity); // [1,2,3,4]
 📌 Original array change nahi hota
+
+destructuring of object ---
+
+const user = {
+  name: "Yaser",
+  age: 22
+};
+
+const { name: username } = user;
+
+console.log(username); // Yaser
+
+Multiple Destructuring ek sath
+const { courseName, price } = course;
+
+Default Value in Destructuring
+const { rating = 5 } = course;
+console.log(rating); // 5
