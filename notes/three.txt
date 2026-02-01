@@ -135,3 +135,75 @@ Value
 for...in
 Object
 Key
+
+
+1️⃣ forEach() kya hota hai?
+👉 forEach() array method hai
+👉 Array ke har element par ek function run karta hai
+👉 Loop ki tarah kaam karta hai, but zyada clean & readable
+Syntax:
+Copy code
+Js
+array.forEach(function(value, index, array) {
+  // code
+});
+🔹 Simple Example
+Copy code
+Js
+let arr = [10, 20, 30];
+
+arr.forEach(function(num) {
+  console.log(num);
+});
+Output:
+Copy code
+
+10
+20
+30
+🔹 Arrow Function ke sath
+Copy code
+Js
+arr.forEach(num => {
+  console.log(num * 2);
+});
+🔹 value, index, array
+Copy code
+Js
+arr.forEach((value, index, arr) => {
+  console.log(value, index, arr);
+});
+🔹 2️⃣ forEach vs for loop (short difference)
+for loop
+forEach
+break / continue possible
+❌ nahi
+old style
+modern
+flexible
+clean & readable
+📌 forEach se value return nahi hoti
+🔹 3️⃣ Callback function kya hota hai?
+👉 Function jo kisi dusre function ke andar argument ke roop me pass hota hai
+👉 Baad me call hota hai (isliye callback)
+Simple Definition:
+A function passed as an argument to another function is called a callback function.
+🔹 Callback Example (Basic)
+Copy code
+Js
+function greet(name, callback) {
+  console.log("Hello " + name);
+  callback();
+}
+
+function sayBye() {
+  console.log("Bye!");
+}
+
+greet("Yaser", sayBye);
+🔹 forEach = callback ka best example ⭐
+Copy code
+Js
+arr.forEach(function(num) {
+  console.log(num);
+});
